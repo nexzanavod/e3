@@ -1,0 +1,5 @@
+export const GET_AUTOMATION = "GET_AUTOMATION";
+export const INSERT_AUTOMATION = "INSERT_AUTOMATION";
+export const GET_AUTOMATION_BY_ID = "GET_AUTOMATION_BY_ID";
+export const GET_USER = "GET_USER";
+

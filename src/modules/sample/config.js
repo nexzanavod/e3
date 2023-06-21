@@ -1,0 +1,1 @@
+export const SAMPLE_DATA_LOADED = "SAMPLE_DATA_LOADED";

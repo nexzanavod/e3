@@ -1,0 +1,111 @@
+.multi-step {
+  text-align: center;
+
+  .progtrckr {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+ol.progtrckr {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 2.5rem;
+}
+
+ol.progtrckr li {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+  align-items: center;
+  width: 150px;
+}
+
+ol.progtrckr li span {
+  padding: 0 1.5rem;
+  font-size: 0.7rem;
+  margin-top: -1rem;
+}
+
+@media (max-width: 650px) {
+  .progtrckr li span {
+    display: none;
+  }
+}
+.progtrckr em {
+  display: none;
+  font-weight: 700;
+}
+
+@media (max-width: 650px) {
+  .progtrckr em {
+    display: inline;
+  }
+}
+
+ol.progtrckr li.progtrckr-todo {
+  color: map-get($theme-colors, muted);
+  border-top: 4px solid map-get($theme-colors, muted);
+}
+
+ol.progtrckr li.progtrckr-doing {
+  color: black;
+  border-top: 4px solid map-get($theme-colors, primary);
+}
+
+ol.progtrckr li.progtrckr-done {
+  color: black;
+  border-top: 4px solid map-get($theme-colors, secondary);
+}
+
+ol.progtrckr li:before {
+  position: relative;
+  top: -1rem;
+  content: "\2713";
+  color: white;
+  width: 2em;
+  line-height: 2em;
+  border-radius: 2em;
+}
+
+ol.progtrckr li.progtrckr-todo:before {
+  background-color: map-get($theme-colors, muted);
+}
+
+ol.progtrckr li:hover:before {
+  background-color: map-get($theme-colors, primary);
+}
+
+ol.progtrckr li.progtrckr-doing:before {
+  background-color: map-get($theme-colors, primary);
+}
+
+ol.progtrckr li.progtrckr-done:before {
+  background-color: map-get($theme-colors, secondary);
+}
+
+.footer-buttons {
+  padding: 1rem 5px;
+  overflow: auto;
+
+  .btn-lg {
+    @extend .btn;
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.wizard-content {
+  height: calc(100vh - 320px);
+  overflow-y: auto;
+}
+
+.CSVImporter_ImporterFrame{
+  border: none !important;
+  background-color: map-get($theme-colors, light);
+  text-align: left;
+}

@@ -1,0 +1,67 @@
+.cron_builder {
+  max-width: none !important;
+  padding: 0 !important;
+  background-color: theme-color("white") !important;
+  border-radius: 0.5rem;
+  border: 0 none #d0cbcb !important;
+
+  .tab-pane {
+    text-align: left;
+  }
+
+  .well {
+    min-height: none !important;
+    padding: 0rem !important;
+    margin-bottom: 0.5rem !important;
+    background-color: transparent !important ;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    box-shadow: none !important;
+    text-align: left;
+
+    .span6 {
+      > br {
+        display: none;
+      }
+    }
+  }
+
+  .container-fluid {
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .nav li a {
+    color: theme-color("dark") !important;
+  }
+
+  .cron_builder_bordering {
+    border: none !important;
+    border-top: none;
+    text-align: center;
+    padding: 10px;
+    background: theme-color("light") !important;
+  }
+
+  .cron-builder-bg {
+    background-color: theme-color("light") !important;
+    border: 1px solid #c8ced3 !important;
+    border-radius: 5px;
+    color: theme-color("dark") !important;
+    padding: 3px;
+    font-size: 80%;
+    margin-top: 0.5rem;
+  }
+
+  .nav-tabs {
+    .nav-link {
+      padding: 0px;
+      border-color: theme-color("white") !important;
+
+      &.active {
+        border-color: theme-color("secondary") !important;
+        background-color: initial !important;
+      }
+    }
+  }
+}

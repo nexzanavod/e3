@@ -1,0 +1,121 @@
+.ruleGroup {
+  background-color: #1a2f4b0c;
+  border: none;
+
+  .btn {
+    padding: 0 10px;
+    font-size: 0.8rem;
+    line-height: 22px;
+    min-width: 24px;
+    border-radius: 2rem;
+
+    &.btn-danger {
+      width: 50px;
+      padding: 0;
+      text-transform: uppercase;
+      font-size: 0;
+      line-height: initial;
+      text-align: center;
+
+      &::after {
+        content: "\f00d";
+        font-family: FontAwesome;
+        font-size: 12px;
+        line-height: 22px;
+        display: inline;
+      }
+    }
+  }
+}
+
+.group-container {
+  padding-right: 0;
+
+  .group {
+    background-color: #1a2f4b0c !important;
+    border: 1px solid #1a2f4b11 !important;
+    padding: 5px;
+
+    .rule--body {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    button {
+      @extend .btn;
+      @extend .btn-xs;
+    }
+
+    .rule--header {
+      button {
+        @extend .btn-danger;
+      }
+    }
+
+    select,
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    input[type="number"] {
+      @extend .form-control;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      @extend .form-check-input;
+    }
+
+    .group--actions {
+      margin-left: auto;
+      flex: inherit;
+      button {
+        margin-left: 5px;
+        @extend .btn-primary;
+
+        &:not(:nth-child(3)) {
+          width: auto;
+          padding: 0px 10px;
+        }
+
+        &:nth-child(3) {
+          @extend .btn-danger;
+        }
+      }
+    }
+
+    .group-or-rule::before,
+    .group-or-rule::after {
+      border-color: theme-color("dark");
+    }
+
+    .group--conjunctions {
+      @extend .form-check-inline;
+      background-color: theme-color("dark");
+      padding: 0px 5px;
+      color: white;
+      border-radius: 5px 5px 5px 0;
+      font-size: 0.8rem;
+
+      input {
+        @extend .form-check;
+        height: 24px;
+      }
+      label {
+        @extend .form-check-label;
+        margin-right: 1rem;
+      }
+
+      .group--drag-handler {
+        background-color: theme-color("light");
+        border-radius: 3px;
+        height: 18px;
+        padding: 0;
+        margin: 0;
+        display: block;
+        border-radius: 3px;
+        align-self: baseline;
+      }
+    }
+  }
+}

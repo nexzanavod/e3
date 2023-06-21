@@ -1,0 +1,3 @@
+export const {SERVICE_URL} = process.env
+export const GET_SEARCH_LOG_REPORT = "GET_SEARCH_LOG_REPORT";
+export const GET_SEARCH_SUMMARY_REPORT = "GET_SEARCH_SUMMARY_REPORT";
